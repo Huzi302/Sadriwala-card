@@ -7,28 +7,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card-container" ontouchstart="">
-    <div class="flip-card" id="flipCard">
+  <div class="card-container">
+    <input type="checkbox" id="flip-toggle">
+    <label for="flip-toggle" class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="card-front.png" alt="Front Side" />
+          <img src="card-front.png" alt="Front Side">
         </div>
         <div class="flip-card-back">
-          <img src="card-back.png" alt="Back Side" />
+          <img src="card-back.png" alt="Back Side">
         </div>
       </div>
-    </div>
+    </label>
   </div>
-
-  <script>
-    const flipCard = document.getElementById('flipCard');
-
-    function toggleFlip() {
-      flipCard.classList.toggle('flipped');
-    }
-
-    flipCard.addEventListener('click', toggleFlip);
-    flipCard.addEventListener('touchstart', toggleFlip);
-  </script>
 </body>
 </html>
