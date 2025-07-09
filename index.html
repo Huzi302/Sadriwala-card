@@ -78,10 +78,15 @@
   </div>
 
   <script>
-    const flipCard = document.getElementById('flipCard');
-    flipCard.addEventListener('click', () => {
-      flipCard.classList.toggle('flipped');
-    });
-  </script>
+  const flipCard = document.getElementById('flipCard');
+
+  // This handles both desktop (click) and mobile (touch)
+  function toggleFlip() {
+    flipCard.classList.toggle('flipped');
+  }
+
+  flipCard.addEventListener('click', toggleFlip);
+  flipCard.addEventListener('touchstart', toggleFlip);
+</script>
 </body>
 </html>
